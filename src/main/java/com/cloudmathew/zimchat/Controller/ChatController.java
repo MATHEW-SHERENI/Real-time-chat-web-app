@@ -17,6 +17,11 @@ public class ChatController {
         message.setTimestamp(LocalDateTime.now());
         return message;
     }
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/chat";
+    }
+
     @GetMapping("/chat")
     public String chat(){
         return "chat";
